@@ -7,6 +7,9 @@ passwd = "${password:16}"
 [config]
 env = [
   "DOMAIN=${main_domain}",
+  "Title=Miranda",
+  "",
+  "# CLIENT",
   "DB_PASS=${passwd}",
   "URL_API=${DOMAIN}/api/v1",
   "URL_CLIENTE=https://${DOMAIN}/",
