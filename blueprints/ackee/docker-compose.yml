@@ -1,24 +1,36 @@
-version: "3"
-
 services:
-  ackee:
-    image: electerious/ackee:3.4.2
-    ports:
-      - "3000"
-    environment:
-      - ACKEE_USERNAME=${ACKEE_USERNAME}
-      - ACKEE_PASSWORD=${ACKEE_PASSWORD}
-      - ACKEE_MONGODB=${ACKEE_MONGODB}
-  
-  mongo:
-    image: mongo:4
-    environment:
-      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
-      - MONGO_INITDB_ROOT_USERNAME=mongo
+  nginx:
+    image: nginx:latest
+    restart: on-failure
     volumes:
-      - mongo-data:/data/db
+      - ../files/etc/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - miranda-network
 
+  client:
+    image: 690358416757.dkr.ecr.eu-west-3.amazonaws.com/miranda/client:latest
+    restart: always
+    env_file:
+      .env
+    networks:
+      - miranda-network
 
-volumes:
-  mongo-data:
-     
+  server:
+    image: 690358416757.dkr.ecr.eu-west-3.amazonaws.com/miranda/server:latest
+    restart: always
+    env_file:
+      .env
+    networks:
+      - miranda-network
+
+  sockets:
+    image: 690358416757.dkr.ecr.eu-west-3.amazonaws.com/miranda/sockets:latest
+    restart: always
+    env_file:
+      .env
+    networks:
+      - miranda-network
+
+networks:
+  miranda-network:
+    driver: bridge
