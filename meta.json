@@ -11,7 +11,9 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas", "prod", "España"
+      "saas",
+      "prod",
+      "España"
     ]
   },
   {
@@ -26,7 +28,9 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas", "prod", "Sao Paulo"
+      "saas",
+      "prod",
+      "Sao Paulo"
     ]
   },
   {
@@ -41,7 +45,9 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas", "prod", "París"
+      "saas",
+      "prod",
+      "París"
     ]
   },
 
@@ -57,7 +63,9 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas", "test", "España"
+      "saas",
+      "test",
+      "España"
     ]
   },
   {
@@ -72,7 +80,9 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas", "test", "Sao Paulo"
+      "saas",
+      "test",
+      "Sao Paulo"
     ]
   },
   {
@@ -87,7 +97,9 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas", "test", "París"
+      "saas",
+      "test",
+      "París"
     ]
   }
 ]
