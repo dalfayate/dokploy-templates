@@ -1,19 +1,72 @@
 [variables]
-ACKEE_USERNAME = "default"
-ACKEE_PASSWORD = "${password:16}"
-MONGO_INITDB_ROOT_PASSWORD = "${password:16}"
-ACKEE_MONGODB = "mongodb://mongo:${MONGO_INITDB_ROOT_PASSWORD}@mongo:27017"
+main_domain = "${domain}"
+TOKEN_SECRET = "${password:64}"
+CRYPT_KEY = "${password:32}"
+passwd = "${password:16}"
 
 [config]
+env = [
+  "DOMAIN=${main_domain}",
+  "DB_PASS=${passwd}",
+  "URL_API=${DOMAIN}/api/v1",
+  "URL_CLIENTE=https://${DOMAIN}/",
+  "URL_SOCKET=https://${DOMAIN}/"
+]
 [[config.domains]]
-serviceName = "ackee"
-port = 3000
+serviceName = "nginx"
+port = 80
 host = "${domain}"
 
+[[config.mounts]]
+filePath = "/nginx/nginx.conf"
+content = """
+events {
+    worker_connections 1024;
+}
 
-[config.env]
-ACKEE_USERNAME = "${ACKEE_USERNAME}"
-ACKEE_PASSWORD = "${ACKEE_PASSWORD}"
-ACKEE_MONGODB = "${ACKEE_MONGODB}"
-MONGO_INITDB_ROOT_PASSWORD = "${MONGO_INITDB_ROOT_PASSWORD}"
+http {
+    # Resolver de Docker (fundamental para usar variables en proxy_pass)
+    resolver 127.0.0.11 ipv6=off valid=30s;
+    include /etc/nginx/mime.types;
 
+    # Configuración para WebSockets
+    map $http_upgrade $connection_upgrade {
+        default upgrade;
+        ''      close;
+    }
+
+    server {
+        listen 80;
+        client_max_body_size 50M;
+
+        # Definición de backends mediante variables (evita el error emerg de host not found)
+        set $client_backend "http://client:3000";
+        set $server_backend "http://server:7800";
+        set $sockets_backend "http://sockets:4000";
+
+        location /api {
+            proxy_pass $server_backend;
+            proxy_set_header Host $http_host;
+            proxy_set_header X-Request-Id $request_id;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /socket.io {
+            proxy_pass $sockets_backend;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection "Upgrade";
+            proxy_set_header Host $host;
+            proxy_read_timeout 86400s;
+        }
+
+        location / {
+            proxy_pass $client_backend;
+            proxy_set_header Host $host;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+    }
+}
+"""
