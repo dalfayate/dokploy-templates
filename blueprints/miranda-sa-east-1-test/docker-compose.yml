@@ -8,7 +8,7 @@ services:
       - miranda-network
 
   client:
-    image: ${{project.AWS_ACCOUNT_ID}}.dkr.ecr.${REGION}.amazonaws.com/miranda/client:preview
+    image: ${project.AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/miranda/client:preview
     restart: always
     env_file:
       .env
@@ -16,7 +16,7 @@ services:
       - miranda-network
 
   server:
-    image: ${{project.AWS_ACCOUNT_ID}}.dkr.ecr.${REGION}.amazonaws.com/miranda/server:preview
+    image: ${project.AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/miranda/server:preview
     restart: always
     env_file:
       .env
@@ -24,7 +24,7 @@ services:
       - miranda-network
 
   sockets:
-    image: ${{project.AWS_ACCOUNT_ID}}.dkr.ecr.${REGION}.amazonaws.com/miranda/sockets:preview
+    image: ${project.AWS_ACCOUNT_ID}.dkr.ecr.${REGION}.amazonaws.com/miranda/sockets:preview
     restart: always
     env_file:
       .env
