@@ -1,18 +1,17 @@
 [
   {
-    "id": "ackee",
-    "name": "Ackee",
-    "version": "latest",
-    "description": "Ackee is a self-hosted analytics tool for your website.",
+    "id": "miranda",
+    "name": "Miranda",
+    "version": "stable",
+    "description": "Si buscas promocionar tu marca, producto o servicio, Miranda te ofrece acceso a una amplia red de medios de comunicación con herramientas avanzadas para crear, gestionar y optimizar tus campañas publicitarias.",
     "logo": "logo.png",
     "links": {
-      "github": "https://github.com/electerious/Ackee",
-      "website": "https://ackee.electerious.com/",
-      "docs": "https://docs.ackee.electerious.com/"
+      "github": "https://github.com/MirandaRadio/Miranda",
+      "website": "https://www.mirandaplayer.com/",
+      "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "analytics",
-      "self-hosted"
+      "saas"
     ]
   }
 ]
