@@ -5,6 +5,7 @@ main_domain = "${domain}"
 env = [
   "DOMAIN=${main_domain}",
   "TITLE=Miranda",
+  "REGION=eu-south-2",
   "",
   "# CLIENT",
   "AXIOS_URL=https://${DOMAIN}/api/v1/",

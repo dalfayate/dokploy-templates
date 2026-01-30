@@ -1,7 +1,83 @@
 [
   {
-    "id": "miranda",
-    "name": "Miranda",
+    "id": "miranda-eu-south-2-prod",
+    "name": "Miranda eu-south-2 Prod",
+    "version": "stable",
+    "description": "Si buscas promocionar tu marca, producto o servicio, Miranda te ofrece acceso a una amplia red de medios de comunicación con herramientas avanzadas para crear, gestionar y optimizar tus campañas publicitarias.",
+    "logo": "logo.png",
+    "links": {
+      "github": "https://github.com/MirandaRadio/Miranda",
+      "website": "https://www.mirandaplayer.com/",
+      "docs": "https://github.com/MirandaRadio/Miranda"
+    },
+    "tags": [
+      "saas"
+    ]
+  },
+  {
+    "id": "miranda-sa-east-1-prod",
+    "name": "Miranda sa-east-1 Prod",
+    "version": "stable",
+    "description": "Si buscas promocionar tu marca, producto o servicio, Miranda te ofrece acceso a una amplia red de medios de comunicación con herramientas avanzadas para crear, gestionar y optimizar tus campañas publicitarias.",
+    "logo": "logo.png",
+    "links": {
+      "github": "https://github.com/MirandaRadio/Miranda",
+      "website": "https://www.mirandaplayer.com/",
+      "docs": "https://github.com/MirandaRadio/Miranda"
+    },
+    "tags": [
+      "saas"
+    ]
+  },
+  {
+    "id": "miranda-eu-west-3-prod",
+    "name": "Miranda eu-west-3 Prod",
+    "version": "stable",
+    "description": "Si buscas promocionar tu marca, producto o servicio, Miranda te ofrece acceso a una amplia red de medios de comunicación con herramientas avanzadas para crear, gestionar y optimizar tus campañas publicitarias.",
+    "logo": "logo.png",
+    "links": {
+      "github": "https://github.com/MirandaRadio/Miranda",
+      "website": "https://www.mirandaplayer.com/",
+      "docs": "https://github.com/MirandaRadio/Miranda"
+    },
+    "tags": [
+      "saas"
+    ]
+  },
+
+  {
+    "id": "miranda-eu-south-2-test",
+    "name": "Miranda eu-south-2 Test",
+    "version": "stable",
+    "description": "Si buscas promocionar tu marca, producto o servicio, Miranda te ofrece acceso a una amplia red de medios de comunicación con herramientas avanzadas para crear, gestionar y optimizar tus campañas publicitarias.",
+    "logo": "logo.png",
+    "links": {
+      "github": "https://github.com/MirandaRadio/Miranda",
+      "website": "https://www.mirandaplayer.com/",
+      "docs": "https://github.com/MirandaRadio/Miranda"
+    },
+    "tags": [
+      "saas"
+    ]
+  },
+  {
+    "id": "miranda-sa-east-1-test",
+    "name": "Miranda sa-east-1 Test",
+    "version": "stable",
+    "description": "Si buscas promocionar tu marca, producto o servicio, Miranda te ofrece acceso a una amplia red de medios de comunicación con herramientas avanzadas para crear, gestionar y optimizar tus campañas publicitarias.",
+    "logo": "logo.png",
+    "links": {
+      "github": "https://github.com/MirandaRadio/Miranda",
+      "website": "https://www.mirandaplayer.com/",
+      "docs": "https://github.com/MirandaRadio/Miranda"
+    },
+    "tags": [
+      "saas"
+    ]
+  },
+  {
+    "id": "miranda-eu-west-3-test",
+    "name": "Miranda eu-west-3 Test",
     "version": "stable",
     "description": "Si buscas promocionar tu marca, producto o servicio, Miranda te ofrece acceso a una amplia red de medios de comunicación con herramientas avanzadas para crear, gestionar y optimizar tus campañas publicitarias.",
     "logo": "logo.png",
