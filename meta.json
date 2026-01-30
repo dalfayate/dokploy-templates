@@ -11,7 +11,7 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas"
+      "saas", "prod"
     ]
   },
   {
@@ -26,7 +26,7 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas"
+      "saas", "prod"
     ]
   },
   {
@@ -41,7 +41,7 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas"
+      "saas", "prod"
     ]
   },
 
@@ -57,7 +57,7 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas"
+      "saas", "test"
     ]
   },
   {
@@ -72,7 +72,7 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas"
+      "saas", "test"
     ]
   },
   {
@@ -87,7 +87,7 @@
       "docs": "https://github.com/MirandaRadio/Miranda"
     },
     "tags": [
-      "saas"
+      "saas", "test"
     ]
   }
 ]
