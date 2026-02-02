@@ -6,6 +6,7 @@ env = [
   "DOMAIN=${main_domain}",
   "TITLE=Miranda",
   "REGION=sa-east-1",
+  "AWS_ACCOUNT_ID=${{project.AWS_ACCOUNT_ID}}",
   "",
   "# CLIENT",
   "AXIOS_URL=https://${DOMAIN}/api/v1/",
